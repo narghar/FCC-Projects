@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Muli:300,400,800&amp;display=swap"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+      <!--
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding!
+
+- The freeCodeCamp Team
+
+-->
+    <main id="main">
+      <header class="header">
+        <div class="header__content">
+          <h1 class="header__title" id="title">
+            The man who made us laugh and cry
+          </h1>
+          <p>
+            <strong>Robin McLaurin Williams</strong> - American comedian and
+            actor was born on 21st, 1951, in Chicago. Robin studied political
+            science before enrolling at Juilliard School to study theatre. He
+            made his feature starring debut playing the title role in Popeye
+            (1980), directed by Robert Altman. Williams, receive Academy Award
+            nominations for Best Actor in a Leading Role in Good Morning,
+            Vietnam (1987), Dead Poets Society (1989), and Fisher King (1991),
+            before he won an Academy Award for his role in Good Will Hunting
+            (1997). In 2014 Williams committed suicide.
+          </p>
+        </div>
+        <figure id="img-div" class="header__image">
+          <img
+            id="image"
+            class="header__image-item"
+            src="https://upload.wikimedia.org/wikipedia/commons/5/59/Robin_Williams_Happy_Feet_premiere.jpg"
+          />
+          <figcaption id="img-caption">Robin Williams</figcaption>
+        </figure>
+      </header>
+      <nav class="nav">
+        <h2 class="nav__title">Filmography</h2>
+        <ul class="nav-list">
+          <li class="nav-list__item">1980</li>
+          <li class="nav-list__item">1982</li>
+          <li class="nav-list__item">1984</li>
+          <li class="nav-list__item">1987</li>
+          <li class="nav-list__item">1989</li>
+          <li class="nav-list__item">1990</li>
+          <li class="nav-list__item">1991</li>
+          <li class="nav-list__item">1993</li>
+          <li class="nav-list__item">1995</li>
+          <li class="nav-list__item">1996</li>
+          <li class="nav-list__item">1997</li>
+          <li class="nav-list__item">1998</li>
+          <li class="nav-list__item">1999</li>
+          <li class="nav-list__item">2002</li>
+          <li class="nav-list__item">2006</li>
+          <li class="nav-list__item">2009</li>
+          <li class="nav-list__item">2013</li>
+        </ul>
+      </nav>
+      <section id="tribute-info" class="filmography">
+        <div class="timeline">
+          <div class="timeline__left">
+            <figure class="timeline-movie">
+              <time datetime="1980" class="timeline-movie__date">1980</time>
+              <img
+                class="timeline-movie__image"
+                src="img/1980.jpg"
+              />
+              <figcaption class="timeline-movie__title">
+                Popeye
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="timeline__right">
+            <figure class="timeline-movie">
+              <time datetime="1982" class="timeline-movie__date">1982</time>
+              <img
+                class="timeline-movie__image"
+                src="img/1982.jpg"
+                alt=""
+              />
+              <figcaption class="timeline-movie__title">
+                The World According to Garp
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="timeline__left">
+            <figure class="timeline-movie">
+              <time datetime="1984" class="timeline-movie__date">1984</time>
+              <img
+                class="timeline-movie__image"
+                src="img/1984.jpg"
+              />
+              <figcaption class="timeline-movie__title">
+                Moscow on the Hudson
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="timeline__right">
+            <figure class="timeline-movie">
+              <time datetime="1987" class="timeline-movie__date">1987</time>
+              <img
+                class="timeline-movie__image"
+                src="img/1987.jpg"
+                alt=""
+              />
+              <figcaption class="timeline-movie__title">
+                Good Morning, Vietnam
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__left">
+            <figure class="timeline-movie">
+              <time datetime="1989" class="timeline-movie__date">1989</time>
+              <img
+                class="timeline-movie__image"
+                src="img/1989.jpg"
+              />
+              <figcaption class="timeline-movie__title">
+                Dead Poets Society
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="timeline__right">
+            <figure class="timeline-movie">
+              <time datetime="1990" class="timeline-movie__date">1990</time>
+              <img
+                class="timeline-movie__image"
+                src="img/1990.jpg"
+                alt=""
+              />
+              <figcaption class="timeline-movie__title">
+                Awakenings
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__left">
+            <figure class="timeline-movie">
+              <time datetime="1991" class="timeline-movie__date">1991</time>
+              <img
+                class="timeline-movie__image"
+                src="img/1991.jpg"
+              />
+              <figcaption class="timeline-movie__title">
+                The Fisher King
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="timeline__right">
+            <figure class="timeline-movie">
+              <time datetime="1991" class="timeline-movie__date">1991</time>
+              <img
+                class="timeline-movie__image"
+                src="img/1991-2.jpg"
+                alt=""
+              />
+              <figcaption class="timeline-movie__title">
+                Hook
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__left">
+            <figure class="timeline-movie">
+              <time datetime="1993" class="timeline-movie__date">1993</time>
+              <img
+                class="timeline-movie__image"
+                src="img/1993.jpg"
+              />
+              <figcaption class="timeline-movie__title">
+                Mrs. Doubtfire
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="timeline__right">
+            <figure class="timeline-movie">
+              <time datetime="1995" class="timeline-movie__date">1995</time>
+              <img
+                class="timeline-movie__image"
+                src="img/1995.jpg"
+                alt=""
+              />
+              <figcaption class="timeline-movie__title">
+                Jumanji
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__left">
+            <figure class="timeline-movie">
+              <time datetime="1996" class="timeline-movie__date">1996</time>
+              <img
+                class="timeline-movie__image"
+                src="img/1996.jpg"
+              />
+              <figcaption class="timeline-movie__title">
+                The Birdcage
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="timeline__right">
+            <figure class="timeline-movie">
+              <time datetime="1997" class="timeline-movie__date">1997</time>
+              <img
+                class="timeline-movie__image"
+                src="img/1997.jpg"
+                alt=""
+              />
+              <figcaption class="timeline-movie__title">
+                Flubber
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__left">
+            <figure class="timeline-movie">
+              <time datetime="1997" class="timeline-movie__date">1997</time>
+              <img
+                class="timeline-movie__image"
+                src="img/1997-2.jpg"
+              />
+              <figcaption class="timeline-movie__title">
+                Good Will Hunting
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="timeline__right">
+            <figure class="timeline-movie">
+              <time datetime="1998" class="timeline-movie__date">1998</time>
+              <img
+                class="timeline-movie__image"
+                src="img/1998.jpg"
+                alt=""
+              />
+              <figcaption class="timeline-movie__title">
+                Patch Adams
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__left">
+            <figure class="timeline-movie">
+              <time datetime="1998" class="timeline-movie__date">1998</time>
+              <img
+                class="timeline-movie__image"
+                src="img/1998-2.jpg"
+              />
+              <figcaption class="timeline-movie__title">
+                What Dreams May Come
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="timeline__right">
+            <figure class="timeline-movie">
+              <time datetime="1999" class="timeline-movie__date">1999</time>
+              <img
+                class="timeline-movie__image"
+                src="img/1999.jpg"
+                alt=""
+              />
+              <figcaption class="timeline-movie__title">
+                Bicentennial Man
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__left">
+            <figure class="timeline-movie">
+              <time datetime="2002" class="timeline-movie__date">2002</time>
+              <img
+                class="timeline-movie__image"
+                src="img/2002.jpg"
+              />
+              <figcaption class="timeline-movie__title">
+                Insomnia
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="timeline__right">
+            <figure class="timeline-movie">
+              <time datetime="2002" class="timeline-movie__date">2002</time>
+              <img
+                class="timeline-movie__image"
+                src="img/2002-2.jpg"
+                alt=""
+              />
+              <figcaption class="timeline-movie__title">
+                One Hour Photo
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__left">
+            <figure class="timeline-movie">
+              <time datetime="2006" class="timeline-movie__date">2006</time>
+              <img
+                class="timeline-movie__image"
+                src="img/2006.jpg"
+              />
+              <figcaption class="timeline-movie__title">
+                Night at the Museum
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="timeline__right">
+            <figure class="timeline-movie">
+              <time datetime="2009" class="timeline-movie__date">2009</time>
+              <img
+                class="timeline-movie__image"
+                src="img/2009.jpg"
+                alt=""
+              />
+              <figcaption class="timeline-movie__title">
+                World's Greatest Dad
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="timeline-center">
+          <figure class="last-movie">
+            <time datetime="2013" class="last-movie__date">2013</time>
+            <img
+              class="last-movie__image"
+              src="img/2013.jpg"
+            />
+            <figcaption class="last-movie__title">
+              The Butler
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
