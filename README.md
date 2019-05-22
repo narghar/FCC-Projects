@@ -1,2 +1,2 @@
-# freeCodeCamp
-freeCodeCamp - personal projects
+# FCC-Projects
+Personal projects freeCodeCamp.org
