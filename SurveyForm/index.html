@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gaming Survey</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 id="title">Gaming Survey</h1>
+      <p id="description">Are you video gamer? Let us know you better!</p>
+    </header>
+
+    <main>
+      <form action="#" method="post" id="survey-form">
+        <label for="name" id="name-label">* Name:</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          required
+          placeholder="Enter your name"
+        />
+        <label for="email" id="email-label">* Email:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          placeholder="Enter your Email"
+        />
+        <label for="age" id="number-label">* Age:</label>
+        <input
+          type="number"
+          name="age"
+          id="number"
+          min="4"
+          max="150"
+          placeholder="Enter your age"
+          required
+        />
+        <label for="dropdown"> Change for dropdown</label>
+        <select id="dropdown" name="dropdown">
+          <option disabled selected>Select an option</option>
+          <option>two</option>
+          <option>three</option>
+          <option>four</option>
+        </select>
+
+        <button type="submit" id="submit">Sumbit</button>
+      </form>
+
+      Thank You For Your Participation!
+    </main>
+    <footer>&copy 2019 by Igor Wysocki</footer>
+  </body>
+</html>
