@@ -1,0 +1,60 @@
+$font: 'Signika', sans-serif;
+$color-primary: #333;
+$color-secondary: #fff;
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    color: $color-primary;
+    font-size: 1.8rem;
+    font-family: $font;
+    font-weight: 400;
+    line-height: 1.6;
+    background: linear-gradient(to top right, #00DBDF, #FB02FD) no-repeat;
+}
+
+header {
+ margin: 2rem auto;
+ text-align: center;
+ color: $color-secondary;
+
+  #title {
+    font-weight: 700;
+    font-size: 4.5rem;
+    text-shadow: 2px 3px 0px rgba(150, 150, 150, 1);
+  }
+  #description {
+    font-weight: 300;
+    font-size: 2.2rem;
+  }
+}
+
+main {
+ max-width: 124rem;
+ margin: 0 auto;
+}
+form {
+  border-radius: 3rem;
+  background: $color-secondary;
+  padding: 3rem;
+}
+fieldset {
+  border-radius: .5rem;
+  border: 1px solid #ccc;
+}
+legend {
+  // margin: 0 auto;
+}
+footer {
+  text-align: center;
+}
