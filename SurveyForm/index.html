@@ -15,79 +15,93 @@
     <main>
       <form action="#" method="GET" id="survey-form">
         <fieldset>
-          <legend>Gamer details</legend>
-          <label for="name" id="name-label">* Name:</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            required
-            placeholder="Enter your name"
-          />
-          <label for="email" id="email-label">* Email:</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            required
-            placeholder="Enter your Email"
-          />
-          <label for="age" id="number-label">* Age:</label>
-          <input
-            type="number"
-            name="age"
-            id="number"
-            min="4"
-            max="150"
-            placeholder="Enter your age"
-            required
-          />
+            <legend>Gamer details</legend>
+          <div class="flex-wrapper">
 
-          <input type="radio" name="sex" id="male" value="male" />
-          <label for="male">Male</label>
-          <input type="radio" name="sex" id="female" value="female" />
-          <label for="female">Female</label>
+
+              <label for="name" id="name-label">Name:</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required
+                placeholder="Enter your name"
+              />
+
+              <label for="email" id="email-label">Email:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                placeholder="Enter your Email"
+              />
+
+              <label for="age" id="number-label">Age:</label>
+              <input
+                type="number"
+                name="age"
+                id="number"
+                min="4"
+                max="150"
+                placeholder="Enter your age"
+                required
+              />
+            </div>
+              <input type="radio" name="sex" id="male" value="male" />
+              <label for="male">Male</label>
+              <input type="radio" name="sex" id="female" value="female" />
+              <label for="female">Female</label>
+
+
         </fieldset>
 
         <fieldset>
-          <legend>How often do you play games?</legend>
-          <input type="radio" name="playing" id="rare" value="rare" required/>
-          <label for="rare">Rarely</label>
-          <input type="radio" name="playing" id="some" value="some" />
-          <label for="some">Sometimes</label>
-          <input type="radio" name="playing" id="often" value="often" />
-          <label for="often">Often (weekly)</label>
-          <input type="radio" name="playing" id="daily" value="daily" />
-          <label for="daily">Daily</label>
+            <legend>How often do you play games?</legend>
+            <div class="grid-wrapper">
+                <input type="radio" name="playing" id="rare" value="rare" required/>
+                <label for="rare">Rarely</label>
+                <input type="radio" name="playing" id="some" value="some" />
+                <label for="some">Sometimes</label>
+                <input type="radio" name="playing" id="often" value="often" />
+                <label for="often">Often (weekly)</label>
+                <input type="radio" name="playing" id="daily" value="daily" />
+                <label for="daily">Daily</label>
+              </div>
         </fieldset>
         <fieldset>
-          <legend>What Platform Do You Mostly Play Games On?</legend>
-          <input type="radio" name="platform" id="pc" value="pc" required/>
-          <label for="pc">PC</label>
-          <input type="radio" name="platform" id="mobile" value="mobile" />
-          <label for="mobile">Mobile</label>
-          <input type="radio" name="platform" id="console" value="console" />
-          <label for="console">Console</label>
-        </fieldset>
-        <fieldset>
-          <legend>What is your favorite game genre?</legend>
-          <input type="checkbox" name="action" id="action" value="true" required />
-          <label for="action">Action</label>
-          <input type="checkbox" name="adventure" id="adventure" value="true" />
-          <label for="adventure">Adventure</label>
-          <input type="checkbox" name="card" id="card" value="true" />
-          <label for="card">Card</label>
-          <input type="checkbox" name="rpg" id="rpg" value="true" />
-          <label for="rpg">RPG</label>
-          <input type="checkbox" name="sports" id="sports" value="true" />
-          <label for="sports">Sport</label>
-          <input type="checkbox" name="strategy" id="strategy" value="true" />
-          <label for="strategy">Strategy</label>
-          <input type="checkbox" name="other" id="other" value="true" />
-          <label for="other">Other</label>
-        </fieldset>
+            <legend>What Platform Do You Mostly Play Games On?</legend>
 
-        <label for="dropdown">How much do you spend on games per year?</label>
+            <div class="grid-wrapper">
+              <input type="radio" name="platform" id="pc" value="pc" required/>
+              <label for="pc">PC</label>
+              <input type="radio" name="platform" id="mobile" value="mobile" />
+              <label for="mobile">Mobile</label>
+              <input type="radio" name="platform" id="console" value="console" />
+              <label for="console">Console</label>
+              </div>
+        </fieldset>
+        <fieldset>
+            <legend>What is your favorite game genre?</legend>
+            <div class="grid-wrapper">
+                <input type="checkbox" name="action" id="action" value="true" required />
+                <label for="action">Action</label>
+                <input type="checkbox" name="adventure" id="adventure" value="true" />
+                <label for="adventure">Adventure</label>
+                <input type="checkbox" name="card" id="card" value="true" />
+                <label for="card">Card</label>
+                <input type="checkbox" name="rpg" id="rpg" value="true" />
+                <label for="rpg">RPG</label>
+                <input type="checkbox" name="sports" id="sports" value="true" />
+                <label for="sports">Sport</label>
+                <input type="checkbox" name="strategy" id="strategy" value="true" />
+                <label for="strategy">Strategy</label>
+                <input type="checkbox" name="other" id="other" value="true" />
+                <label for="other">Other</label>
+              </div>
+        </fieldset>
+        <div class="flex-wrapper-column">
+          <label for="dropdown">How much do you spend on games per year?</label>
         <select id="dropdown" name="dropdown">
           <option disabled selected>Select an option</option>
           <option value="xs">0$ - 50$</option>
@@ -99,6 +113,8 @@
         <textarea id="games" name="games" rows="4" cols="50" placeholder="One game per line..."></textarea>
         <button type="submit" id="submit">Sumbit</button>
         <p>Thank You For Your Participation!</p>
+        </div>
+
       </form>
     </main>
     <footer>&copy 2019 by Igor Wysocki</footer>
