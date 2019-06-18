@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    height: 100vh;
+    height: 100%;
     color: $color-primary;
     font-size: 1.8rem;
     font-family: $font;
@@ -40,7 +40,7 @@ header {
 }
 
 main {
- max-width: 124rem;
+ max-width: 70rem;
  margin: 0 auto;
 }
 form {
@@ -51,10 +51,77 @@ form {
 fieldset {
   border-radius: .5rem;
   border: 1px solid #ccc;
+  padding: 3rem;
+  margin-bottom: 2rem;
+  & .flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  & .grid-wrapper {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.flex-wrapper-column {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+span {
+  justify-self: end;
 }
 legend {
-  // margin: 0 auto;
+    // margin: 0 auto;
+}
+label {
+  min-width: 15rem;
+}
+input[type=radio], input[type=checkbox] {
+}
+input[type=text], input[type=email], input[type=number] {
+  min-width: 28rem;
 }
 footer {
   text-align: center;
+}
+
+#submit {
+  border: 0;
+  padding: 1rem 10rem;
+  text-transform: uppercase;
+  border-radius: 4rem;
+  color: $color-secondary;
+  font-weight: 700;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #00DBDF, #FB02FD);
+  position: relative;
+  z-index: 100;
+
+
+
+  &:before {
+    border: 0;
+    border-radius: inherit;
+    background-image: linear-gradient(to left, #00DBDF, #FB02FD);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -100;
+    overflow: hidden;
+    transition: opacity .5s;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
 }
