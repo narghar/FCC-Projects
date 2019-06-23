@@ -1,6 +1,14 @@
 $font: 'Signika', sans-serif;
-$color-primary: #333;
-$color-secondary: #fff;
+$color-secondary: #FB02FD;
+$color-primary: #00DBDF;
+$color-primary-dark: rgb(0, 141, 223);
+$color-primary-light: rgb(106, 208, 255);
+$header-color: #fff;
+$color-grey-dark: #333;
+$color-grey-light: #efefef;
+$color-grey-light-2: #ccc;
+
+
 *,
 *::before,
 *::after {
@@ -14,19 +22,20 @@ html {
 }
 
 body {
-    height: 100%;
-    color: $color-primary;
-    font-size: 1.8rem;
+
+    color: $color-grey-dark;
+    font-size: 1.7rem;
     font-family: $font;
     font-weight: 400;
     line-height: 1.6;
-    background: linear-gradient(to top right, #00DBDF, #FB02FD) no-repeat;
+    background: linear-gradient(to top right, $color-primary, $color-secondary) no-repeat;
+
 }
 
 header {
  margin: 2rem auto;
  text-align: center;
- color: $color-secondary;
+ color: $header-color;
 
   #title {
     font-weight: 700;
@@ -45,22 +54,25 @@ main {
 }
 form {
   border-radius: 3rem;
-  background: $color-secondary;
+  background: $header-color;
   padding: 3rem;
 }
 fieldset {
   border-radius: .5rem;
-  border: 1px solid #ccc;
-  padding: 3rem;
+  border: 1px solid $color-grey-light-2;
+  padding: 2rem 3.5rem;
   margin-bottom: 2rem;
+
   & .flex-wrapper {
     display: flex;
     flex-wrap: wrap;
-
+    padding: 0 2.6rem;
   }
+
   & .grid-wrapper {
     display: grid;
     grid-template-columns: 2rem 1fr;
+    grid-auto-rows: 3rem;
     justify-content: center;
     align-items: center;
   }
@@ -74,39 +86,141 @@ fieldset {
 span {
   justify-self: end;
 }
-legend {
+legend,
+.question {
     // margin: 0 auto;
+    padding: 0 1rem;
+    color: $color-primary-dark;
+    text-transform: uppercase;
 }
+
+label {
+  cursor: pointer;
+}
+
 label {
   min-width: 15rem;
+  margin: 1rem 0;
 }
 input[type=radio], input[type=checkbox] {
+  opacity: 0;
 }
 input[type=text], input[type=email], input[type=number] {
+  border: none;
+  border-bottom: 1px solid $color-grey-light;
+
   min-width: 28rem;
+  font-size: 1.9rem;
+  background-color: $header-color;
+  color: $color-grey-dark;
+  -webkit-text-fill-color: $color-grey-dark;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px $header-color inset !important;
 }
-footer {
-  text-align: center;
+
+
+
+
 }
+//Input border bottom effect
+.border-effect {
+  margin: 1rem 0;
+  position: relative;
+}
+.border ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: $color-secondary; transition: 0.4s;}
+.border:focus ~ .focus-border{width: 100%; transition: 0.4s;}
+
+// Input checkboxes - non standard
+input[type=checkbox] + label span {
+  background-color: $color-primary-light;
+    font-size: 3.5rem;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    line-height: 0.25em;
+    margin: 4px 8px 8px 8px;
+    padding: 2px;
+    vertical-align: middle;
+    text-align: center;
+}
+ input[type=checkbox]:checked + label span::after {
+       content: "\2713";
+       color: $color-secondary;
+}
+
+// Input radio - non standard
+input[type=radio] + label span {
+  background-color: $color-primary-light;
+    font-size: 3.5rem;
+    border-radius: 50%;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    line-height: 0.25em;
+    margin: 4px 8px 8px 8px;
+    padding: 2px;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+}
+ input[type=radio]:checked + label span::after {
+       content: "\26AC";
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       color: $color-secondary;
+}
+
+select {
+  background: $color-grey-light;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+select,
+textarea {
+  font-family: $font;
+  font-size: 1.7rem;
+  color: $color-grey-dark;
+  border: 1px solid $color-grey-light-2;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  border-radius: .5rem;
+
+}
+
+
 
 #submit {
   border: 0;
-  padding: 1rem 10rem;
+  padding: .9rem 0;
+  margin: 3rem 0;
   text-transform: uppercase;
   border-radius: 4rem;
-  color: $color-secondary;
+  color: $header-color;
+  font-size: 1.8rem;
   font-weight: 700;
   cursor: pointer;
-  background-image: linear-gradient(to right, #00DBDF, #FB02FD);
+  background-image: linear-gradient(to right, $color-primary, $color-secondary);
   position: relative;
   z-index: 100;
+  box-shadow: 2px 2px 16px 0px rgba(150, 150, 150, 1);
 
 
 
   &:before {
     border: 0;
     border-radius: inherit;
-    background-image: linear-gradient(to left, #00DBDF, #FB02FD);
+    background-image: linear-gradient(to left, $color-primary,  $color-secondary);
     content: '';
     display: block;
     height: 100%;
@@ -125,3 +239,18 @@ footer {
     }
   }
 }
+
+.thanks {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: $color-primary-dark;
+  text-shadow: 2px 3px 0px rgba($color-primary-light, .3);
+}
+
+footer {
+  font-weight: 300;
+  font-size: 1.6rem;
+  text-align: center;
+  color: $header-color;
+}
+

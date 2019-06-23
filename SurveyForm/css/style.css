@@ -10,9 +10,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  height: 100%;
   color: #333;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-family: "Signika", sans-serif;
   font-weight: 400;
   line-height: 1.6;
@@ -42,14 +41,16 @@ form {
 fieldset {
   border-radius: .5rem;
   border: 1px solid #ccc;
-  padding: 3rem;
+  padding: 2rem 3.5rem;
   margin-bottom: 2rem; }
   fieldset .flex-wrapper {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    padding: 0 2.6rem; }
   fieldset .grid-wrapper {
     display: grid;
     grid-template-columns: 2rem 1fr;
+    grid-auto-rows: 3rem;
     justify-content: center;
     align-items: center; }
 
@@ -61,26 +62,119 @@ fieldset {
 span {
   justify-self: end; }
 
+legend,
+.question {
+  padding: 0 1rem;
+  color: #008ddf;
+  text-transform: uppercase; }
+
 label {
-  min-width: 15rem; }
+  cursor: pointer; }
+
+label {
+  min-width: 15rem;
+  margin: 1rem 0; }
+
+input[type=radio], input[type=checkbox] {
+  opacity: 0; }
 
 input[type=text], input[type=email], input[type=number] {
-  min-width: 28rem; }
+  border: none;
+  border-bottom: 1px solid #efefef;
+  min-width: 28rem;
+  font-size: 1.9rem;
+  background-color: #fff;
+  color: #333;
+  -webkit-text-fill-color: #333; }
+  input[type=text]:focus, input[type=email]:focus, input[type=number]:focus {
+    outline: none; }
+  input[type=text]:-webkit-autofill, input[type=text]:-webkit-autofill:hover, input[type=text]:-webkit-autofill:focus, input[type=text]:-webkit-autofill:active, input[type=email]:-webkit-autofill, input[type=email]:-webkit-autofill:hover, input[type=email]:-webkit-autofill:focus, input[type=email]:-webkit-autofill:active, input[type=number]:-webkit-autofill, input[type=number]:-webkit-autofill:hover, input[type=number]:-webkit-autofill:focus, input[type=number]:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #fff inset !important; }
 
-footer {
+.border-effect {
+  margin: 1rem 0;
+  position: relative; }
+
+.border ~ .focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #FB02FD;
+  transition: 0.4s; }
+
+.border:focus ~ .focus-border {
+  width: 100%;
+  transition: 0.4s; }
+
+input[type=checkbox] + label span {
+  background-color: #6ad0ff;
+  font-size: 3.5rem;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  line-height: 0.25em;
+  margin: 4px 8px 8px 8px;
+  padding: 2px;
+  vertical-align: middle;
   text-align: center; }
+
+input[type=checkbox]:checked + label span::after {
+  content: "\2713";
+  color: #FB02FD; }
+
+input[type=radio] + label span {
+  background-color: #6ad0ff;
+  font-size: 3.5rem;
+  border-radius: 50%;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  line-height: 0.25em;
+  margin: 4px 8px 8px 8px;
+  padding: 2px;
+  vertical-align: middle;
+  text-align: center;
+  position: relative; }
+
+input[type=radio]:checked + label span::after {
+  content: "\26AC";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FB02FD; }
+
+select {
+  background: #efefef;
+  cursor: pointer;
+  margin-bottom: 2rem; }
+
+select,
+textarea {
+  font-family: "Signika", sans-serif;
+  font-size: 1.7rem;
+  color: #333;
+  border: 1px solid #ccc;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  border-radius: .5rem; }
 
 #submit {
   border: 0;
-  padding: 1rem 10rem;
+  padding: .9rem 0;
+  margin: 3rem 0;
   text-transform: uppercase;
   border-radius: 4rem;
   color: #fff;
+  font-size: 1.8rem;
   font-weight: 700;
   cursor: pointer;
   background-image: linear-gradient(to right, #00DBDF, #FB02FD);
   position: relative;
-  z-index: 100; }
+  z-index: 100;
+  box-shadow: 2px 2px 16px 0px #969696; }
   #submit:before {
     border: 0;
     border-radius: inherit;
@@ -98,3 +192,15 @@ footer {
     transition: opacity .5s; }
   #submit:hover:before {
     opacity: 1; }
+
+.thanks {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #008ddf;
+  text-shadow: 2px 3px 0px rgba(106, 208, 255, 0.3); }
+
+footer {
+  font-weight: 300;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #fff; }

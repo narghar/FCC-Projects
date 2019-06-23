@@ -20,25 +20,37 @@
 
 
               <label for="name" id="name-label">Name:</label>
-              <input
+              <div class="border-effect">
+                <input
+                class="border"
                 type="text"
                 name="name"
                 id="name"
                 required
                 placeholder="Enter your name"
               />
+              <span class="focus-border"></span>
+              </div>
+
 
               <label for="email" id="email-label">Email:</label>
-              <input
+              <div class="border-effect">
+                <input
+                class="border"
                 type="email"
                 name="email"
                 id="email"
                 required
-                placeholder="Enter your Email"
+                placeholder="Enter your email"
               />
+              <span class="focus-border"></span>
+              </div>
+
 
               <label for="age" id="number-label">Age:</label>
-              <input
+              <div class="border-effect">
+                <input
+                class="border"
                 type="number"
                 name="age"
                 id="number"
@@ -47,11 +59,14 @@
                 placeholder="Enter your age"
                 required
               />
+              <span class="focus-border"></span>
+              </div>
+
             </div>
               <input type="radio" name="sex" id="male" value="male" />
-              <label for="male">Male</label>
+              <label for="male"><span></span>Male</label>
               <input type="radio" name="sex" id="female" value="female" />
-              <label for="female">Female</label>
+              <label for="female"><span></span>Female</label>
 
 
         </fieldset>
@@ -60,13 +75,13 @@
             <legend>How often do you play games?</legend>
             <div class="grid-wrapper">
                 <input type="radio" name="playing" id="rare" value="rare" required/>
-                <label for="rare">Rarely</label>
+                <label for="rare"><span></span>Rarely</label>
                 <input type="radio" name="playing" id="some" value="some" />
-                <label for="some">Sometimes</label>
+                <label for="some"><span></span>Sometimes</label>
                 <input type="radio" name="playing" id="often" value="often" />
-                <label for="often">Often (weekly)</label>
+                <label for="often"><span></span>Often (weekly)</label>
                 <input type="radio" name="playing" id="daily" value="daily" />
-                <label for="daily">Daily</label>
+                <label for="daily"><span></span>Daily</label>
               </div>
         </fieldset>
         <fieldset>
@@ -74,45 +89,45 @@
 
             <div class="grid-wrapper">
               <input type="radio" name="platform" id="pc" value="pc" required/>
-              <label for="pc">PC</label>
+              <label for="pc"><span></span>PC</label>
               <input type="radio" name="platform" id="mobile" value="mobile" />
-              <label for="mobile">Mobile</label>
+              <label for="mobile"><span></span>Mobile</label>
               <input type="radio" name="platform" id="console" value="console" />
-              <label for="console">Console</label>
+              <label for="console"><span></span>Console</label>
               </div>
         </fieldset>
         <fieldset>
             <legend>What is your favorite game genre?</legend>
             <div class="grid-wrapper">
-                <input type="checkbox" name="action" id="action" value="true" required />
-                <label for="action">Action</label>
+                <input type="checkbox" name="action" id="action" value="true"/>
+                <label for="action"><span></span>Action</label>
                 <input type="checkbox" name="adventure" id="adventure" value="true" />
-                <label for="adventure">Adventure</label>
+                <label for="adventure"><span></span>Adventure</label>
                 <input type="checkbox" name="card" id="card" value="true" />
-                <label for="card">Card</label>
+                <label for="card"><span></span>Card</label>
                 <input type="checkbox" name="rpg" id="rpg" value="true" />
-                <label for="rpg">RPG</label>
+                <label for="rpg"><span></span>RPG</label>
                 <input type="checkbox" name="sports" id="sports" value="true" />
-                <label for="sports">Sport</label>
+                <label for="sports"><span></span>Sport</label>
                 <input type="checkbox" name="strategy" id="strategy" value="true" />
-                <label for="strategy">Strategy</label>
+                <label for="strategy"><span></span>Strategy</label>
                 <input type="checkbox" name="other" id="other" value="true" />
-                <label for="other">Other</label>
+                <label for="other"><span></span>Other</label>
               </div>
         </fieldset>
         <div class="flex-wrapper-column">
-          <label for="dropdown">How much do you spend on games per year?</label>
-        <select id="dropdown" name="dropdown">
+          <label for="dropdown" class="question">How much do you spend on games per year?</label>
+        <select  id="dropdown" name="dropdown">
           <option disabled selected>Select an option</option>
-          <option value="xs">0$ - 50$</option>
+          <option class="decorated" value="xs">0$ - 50$</option>
           <option value="sm">50$ - 100$</option>
           <option value="md">100$ - 200$</option>
           <option value="lg">more than 200$</option>
         </select>
-        <label for="games">Mention at least three favourite games you have played</label>
-        <textarea id="games" name="games" rows="4" cols="50" placeholder="One game per line..."></textarea>
+        <label for="games" class="question">Mention at least three favourite games you have played</label>
+        <textarea id="games" name="games" rows="4" cols="50" placeholder="One game per line..." required></textarea>
         <button type="submit" id="submit">Sumbit</button>
-        <p>Thank You For Your Participation!</p>
+        <p class="thanks">Thank You For Your Participation!</p>
         </div>
 
       </form>
