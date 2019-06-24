@@ -28,8 +28,12 @@
                 type="text"
                 name="name"
                 id="name"
-                required
                 placeholder="Enter your name"
+                pattern="[a-zA-Z ]+"
+                minlength="3"
+                title="ENTER LETTERS ONLY"
+                required
+
               />
               <span class="focus-border"></span>
               </div>
@@ -126,9 +130,9 @@
           <option value="md">100$ - 200$</option>
           <option value="lg">more than 200$</option>
         </select>
-        <label for="games" class="question">Mention at least three favourite games you have played</label>
+        <label for="games" class="question">Mention at least 3 favourite games you have played</label>
         <textarea id="games" name="games" rows="4" cols="50" placeholder="One game per line..." required></textarea>
-        <button type="submit" id="submit">Sumbit</button>
+        <button type="submit" id="submit">Submit</button>
         <p class="thanks">Thank You For Your Participation!</p>
         </div>
 
