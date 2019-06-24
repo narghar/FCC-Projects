@@ -8,6 +8,9 @@ $color-grey-dark: #333;
 $color-grey-light: #efefef;
 $color-grey-light-2: #ccc;
 
+//breakpoint
+$bp: 45em;
+
 
 *,
 *::before,
@@ -49,7 +52,10 @@ header {
 }
 
 main {
- max-width: 70rem;
+ width: 70rem;
+ @media only screen and (max-width: $bp) {
+  width: 100%;
+ }
  margin: 0 auto;
 }
 form {
@@ -86,34 +92,49 @@ fieldset {
 span {
   justify-self: end;
 }
+
+label {
+  width: 15rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  @media only screen and (max-width: $bp) {
+    width: 100%;
+   }
+}
+
+
 legend,
 .question {
-    // margin: 0 auto;
+
     padding: 0 1rem;
     color: $color-primary-dark;
     text-transform: uppercase;
+    width: auto;
+
+    @media only screen and (max-width: $bp) {
+      margin: 0 auto;
+      text-align: center;
+    }
 }
 
-label {
-  cursor: pointer;
-}
 
-label {
-  min-width: 15rem;
-  margin: 1rem 0;
-}
+
+
 input[type=radio], input[type=checkbox] {
   opacity: 0;
 }
 input[type=text], input[type=email], input[type=number] {
   border: none;
   border-bottom: 1px solid $color-grey-light;
-
-  min-width: 28rem;
+  width: 28rem;
   font-size: 1.9rem;
   background-color: $header-color;
   color: $color-grey-dark;
   -webkit-text-fill-color: $color-grey-dark;
+
+  @media only screen and (max-width: $bp) {
+    max-width: 15rem;
+   }
 
   &:focus {
     outline: none;
@@ -146,7 +167,7 @@ input[type=checkbox] + label span {
     width: 2rem;
     height: 2rem;
     line-height: 0.25em;
-    margin: 4px 8px 8px 8px;
+    margin: 8px;
     padding: 2px;
     vertical-align: middle;
     text-align: center;
@@ -159,25 +180,34 @@ input[type=checkbox] + label span {
 // Input radio - non standard
 input[type=radio] + label span {
   background-color: $color-primary-light;
-    font-size: 3.5rem;
+    font-size: 62px;
     border-radius: 50%;
     display: inline-block;
-    width: 2rem;
-    height: 2rem;
-    line-height: 0.25em;
-    margin: 4px 8px 8px 8px;
+    width: 20px;
+    height: 20px;
+    margin: 8px;
     padding: 2px;
     vertical-align: middle;
     text-align: center;
     position: relative;
 }
  input[type=radio]:checked + label span::after {
-       content: "\26AC";
+       /* content: "\26AC";
        position: absolute;
        top: 50%;
        left: 50%;
        transform: translate(-50%, -50%);
-       color: $color-secondary;
+       color: $color-secondary; */
+
+       position: absolute;
+       content: "";
+       top: 0;
+       left: 0;
+       border-radius: 50%;
+       width: 100%;
+       height: 100%;
+       background-color: $color-secondary;
+
 }
 
 select {
