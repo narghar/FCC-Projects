@@ -1,0 +1,17 @@
+{
+  "name": "productlandingpage",
+  "version": "1.0.0",
+  "description": "BielskoTour Webpage",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel devserver compile:sass",
+    "devserver": "live-server",
+    "compile:sass": "node-sass --watch scss/style.scss css/style.css -o"
+  },
+  "author": "Igor Wysocki",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5"
+  }
+}
