@@ -1,0 +1,70 @@
+#header {
+  height: 50rem;
+  background-image: linear-gradient(to bottom,
+      rgba(15, 36, 97, .95) 4rem,
+      rgba(0, 0, 0, .1) 20%,
+      rgba(0, 0, 0, .05)),
+    url(../img/teatr.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+#nav-bar {
+  position: fixed;
+  width: 100%;
+  background-color: #0f2461;
+  z-index: 100;
+
+  & ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+
+
+
+  & .nav-link {
+    margin-right: 2rem;
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+
+
+
+
+.center-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#form {
+  display: flex;
+  flex-wrap: wrap;
+
+  & label {
+    flex: 100%;
+  }
+
+  & #email {
+    flex: 1;
+  }
+}
+
+.header-title {
+
+  color: #fff;
+  text-transform: uppercase;
+}
