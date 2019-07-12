@@ -1,31 +1,30 @@
 #header {
-  height: 50rem;
+  height: 100vh;
   background-image: linear-gradient(to bottom,
-      rgba(15, 36, 97, .95) 4rem,
-      rgba(0, 0, 0, .15) 20%,
-      rgba(0, 0, 0, .95)),
+      rgba(15, 36, 97, 0.95) 4rem,
+      rgba(0, 0, 0, 0.15) 20%,
+      rgba(0, 0, 0, 0.95)),
     url(../img/teatr.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   position: relative;
 }
 
 #header-img {
   width: 3.6rem;
   height: 3.2rem;
-  margin-right: 5rem;
 }
 
 #nav-bar {
   position: fixed;
   height: 4rem;
-  left: 50%;
-  transform: translateX(-50%);
   background-color: #0f2461;
-  z-index: 100;
+  width: 100%;
+  z-index: 1000;
   display: flex;
-  border-radius: 0 0 2rem 2rem;
+  justify-content: center;
 
   & .nav-brand {
     display: flex;
@@ -35,18 +34,19 @@
     font-size: 2.3rem;
     font-weight: 700;
     color: #fff;
-    transition: all .5s;
+    transition: all 0.5s;
   }
 
   & .nav-brand:hover {
-    transform: translateY(.5rem);
+    transform: translateY(0.5rem);
   }
 
   & ul {
     list-style: none;
     display: flex;
     align-items: center;
-    margin-top: .7rem;
+    margin-top: 0.7rem;
+    margin-left: 4rem;
 
     @media (max-width: 600px) {
       display: none;
@@ -65,13 +65,11 @@
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    transition: all .3s;
-
+    transition: all 0.3s;
   }
 
   & .nav-link:hover {
-
-    color: $color-primary;
+    color: $color-secondary;
   }
 
   & .nav-link:after {
@@ -80,16 +78,13 @@
     width: 0%;
     padding-bottom: 2px;
     border-bottom: 3px solid $color-primary;
-    transition: .5s;
+    transition: 0.5s;
   }
 
   & .nav-link:hover:after {
     width: 100%;
   }
 }
-
-
-
 
 .center-wrap {
   width: 70%;
@@ -103,6 +98,18 @@
   text-align: center;
 }
 
+.header-title {
+  font-family: $font-secondary;
+  font-size: 7vw;
+  color: #fff;
+  text-transform: uppercase;
+
+  & span {
+    display: block;
+    color: $color-primary;
+  }
+}
+
 #form {
   margin-top: 3rem;
   display: flex;
@@ -111,10 +118,24 @@
 
   & label {
     flex: 100%;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
 
   & #email {
     flex: 8;
+    border-width: 0;
+    border-radius: 30px 0 0 30px;
+    font-family: $font-primary;
+    font-size: 1.5rem;
+    padding-left: 2.5rem;
+    padding-top: 0.4rem;
+    color: #aaa;
+  }
+
+  & #email:focus {
+    outline-color: $color-primary;
   }
 
   & #submit {
@@ -123,23 +144,16 @@
     font-size: 1.6rem;
     text-transform: uppercase;
     color: #fff;
-    background-color: $color-primary;
+    background-color: #5d8200;
     border: 0;
     border-radius: 0 30px 30px 0;
     padding: 0 2.5rem;
     padding-top: 1.5rem;
     padding-bottom: 1.1rem;
+    cursor: pointer;
   }
-}
 
-.header-title {
-  font-family: $font-secondary;
-  font-size: 8rem;
-  color: #fff;
-  text-transform: uppercase;
-
-  & span {
-    display: block;
-    color: $color-primary;
+  & #submit:hover {
+    background-color: $color-secondary;
   }
 }
