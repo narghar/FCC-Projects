@@ -3,6 +3,7 @@ sans-serif;
 $font-secondary: 'Amatic SC',
 cursive;
 $color-primary: #96d800;
+$color-secondary: #f58f92;
 
 
 *,
@@ -19,14 +20,18 @@ html {
 }
 
 body {
-  background-color: #f3f3f3;
+  background-color: #fffffe;
   font-family: $font-primary;
+  font-size: 1.8rem;
+  color: #585858;
+  line-height: 1.4;
 }
+
+h2 {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  color: $color-secondary;
+}
+
 
 // https://colorpalettes.net/color-palette-3862/
-
-.container {
-  max-width: 122rem;
-  margin: 0 auto;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5)
-}

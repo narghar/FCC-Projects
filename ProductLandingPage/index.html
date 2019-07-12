@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BielkoTour</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Josefin+Sans:400,700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>BielkoTour</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link
-    href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Josefin+Sans:400,700&display=swap&subset=latin-ext"
-    rel="stylesheet" />
-</head>
-
-<body>
-  <div class="container">
+  <body>
     <div id="header">
       <nav id="nav-bar">
         <a href="#" class="nav-brand">
@@ -33,19 +32,74 @@
         <h1 class="header-title">
           Fantastic Weekend in <span>Bielsko-Biała</span>
         </h1>
-        <form action="https://www.freecodecamp.com/email-submit" method="POST" id="form">
-          <label for="email">Subscribe to our Tours & Travelling Newsletter</label>
-          <input type="email" name="email" id="email" placeholder="email adress" required />
+        <form
+          action="https://www.freecodecamp.com/email-submit"
+          method="POST"
+          id="form"
+        >
+          <label for="email"
+            >Subscribe to our Tours & Travelling Newsletter</label
+          >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter email adress"
+            required
+          />
           <input type="submit" id="submit" value="Subscribe" />
         </form>
       </div>
     </div>
-
     <section id="about">
-      <div class="embed-container">
-        <iframe id="video" src="https://www.youtube.com/embed/owR8lT0pwC4" frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="about-text">
+        <h2>Lorem Lorem</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero saepe
+          animi, quia velit, aliquid sequi iusto explicabo nihil vel eos
+          recusandae voluptatem ullam odit? Quae tempora rerum nobis autem
+          temporibus. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Vero saepe animi, quia velit, aliquid sequi iusto explicabo nihil vel
+          eos recusandae voluptatem ullam odit? Quae tempora rerum nobis autem
+          temporibus.
+        </p>
       </div>
+      <div class="collage">
+        <img
+          class="collage__item collage__item--1"
+          src="img/01-collage.jpg"
+          alt="Mountains"
+        />
+        <img
+          class="collage__item collage__item--2 "
+          src="img/02-collage.jpg"
+          alt="Castle"
+        />
+        <img
+          class="collage__item collage__item--3"
+          src="img/03-collage.jpg"
+          alt="Bolek & Lolek"
+        />
+      </div>
+    </section>
+    <section id="featured-video">
+      <div class="video-container">
+        <div class="embed-container">
+          <iframe
+            id="video"
+            src="https://www.youtube.com/embed/owR8lT0pwC4"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero saepe
+        animi, quia velit, aliquid sequi iusto explicabo nihil vel eos
+        recusandae voluptatem ullam odit? Quae tempora rerum nobis autem
+        temporibus.
+      </p>
     </section>
 
     <section id="tours"></section>
@@ -53,11 +107,10 @@
     <section id="gallery"></section>
 
     <section id="contact"></section>
-  </div>
-  <script>
-    const projectName = "product-landing-page";
-  </script>
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-</body>
 
+    <script>
+      const projectName = "product-landing-page";
+    </script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
 </html>

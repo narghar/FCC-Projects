@@ -10,17 +10,57 @@ html {
   font-size: 62.5%; }
 
 body {
-  background-color: #f3f3f3;
-  font-family: "Josefin Sans", sans-serif; }
+  background-color: #fffffe;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.8rem;
+  color: #585858;
+  line-height: 1.4; }
 
-.container {
-  max-width: 122rem;
-  margin: 0 auto;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); }
+h2 {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  color: #f58f92; }
 
 #about {
-  max-width: 60rem;
-  margin: 0 auto; }
+  padding: 10rem 4rem;
+  display: flex; }
+
+.about-text {
+  flex: 0 1 50%;
+  padding: 5rem; }
+
+.collage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative; }
+  .collage__item {
+    width: 50%;
+    position: absolute;
+    box-shadow: 0 0 12px 0px rgba(0, 0, 0, 0.45);
+    transition: all .5s;
+    border-radius: 4px; }
+    .collage__item:hover {
+      box-shadow: 0 0 0 1rem #f58f92;
+      transform: scale(1.2);
+      z-index: 100; }
+    .collage__item--1 {
+      top: 0;
+      left: 0; }
+    .collage__item--2 {
+      top: 2vw;
+      right: 4vw; }
+    .collage__item--3 {
+      top: 11vw;
+      left: 11vw; }
+
+#video {
+  padding: 3rem 5rem;
+  background: url();
+  display: flex; }
+
+.video-container {
+  width: 50%; }
 
 .embed-container {
   position: relative;
@@ -39,27 +79,26 @@ body {
   height: 100%; }
 
 #header {
-  height: 50rem;
+  height: 100vh;
   background-image: linear-gradient(to bottom, rgba(15, 36, 97, 0.95) 4rem, rgba(0, 0, 0, 0.15) 20%, rgba(0, 0, 0, 0.95)), url(../img/teatr.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   position: relative; }
 
 #header-img {
   width: 3.6rem;
-  height: 3.2rem;
-  margin-right: 5rem; }
+  height: 3.2rem; }
 
 #nav-bar {
   position: fixed;
   height: 4rem;
-  left: 50%;
-  transform: translateX(-50%);
   background-color: #0f2461;
-  z-index: 100;
+  width: 100%;
+  z-index: 1000;
   display: flex;
-  border-radius: 0 0 2rem 2rem; }
+  justify-content: center; }
   #nav-bar .nav-brand {
     display: flex;
     align-items: center;
@@ -68,14 +107,15 @@ body {
     font-size: 2.3rem;
     font-weight: 700;
     color: #fff;
-    transition: all .5s; }
+    transition: all 0.5s; }
   #nav-bar .nav-brand:hover {
     transform: translateY(0.5rem); }
   #nav-bar ul {
     list-style: none;
     display: flex;
     align-items: center;
-    margin-top: .7rem; }
+    margin-top: 0.7rem;
+    margin-left: 4rem; }
     @media (max-width: 600px) {
       #nav-bar ul {
         display: none; } }
@@ -89,16 +129,16 @@ body {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    transition: all .3s; }
+    transition: all 0.3s; }
   #nav-bar .nav-link:hover {
-    color: #96d800; }
+    color: #f58f92; }
   #nav-bar .nav-link:after {
     content: "";
     display: block;
     width: 0%;
     padding-bottom: 2px;
     border-bottom: 3px solid #96d800;
-    transition: .5s; }
+    transition: 0.5s; }
   #nav-bar .nav-link:hover:after {
     width: 100%; }
 
@@ -113,33 +153,48 @@ body {
   align-items: center;
   text-align: center; }
 
+.header-title {
+  font-family: "Amatic SC", cursive;
+  font-size: 7vw;
+  color: #fff;
+  text-transform: uppercase; }
+  .header-title span {
+    display: block;
+    color: #96d800; }
+
 #form {
   margin-top: 3rem;
   display: flex;
   flex-wrap: wrap;
   width: 80%; }
   #form label {
-    flex: 100%; }
+    flex: 100%;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 1rem; }
   #form #email {
-    flex: 8; }
+    flex: 8;
+    border-width: 0;
+    border-radius: 30px 0 0 30px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.5rem;
+    padding-left: 2.5rem;
+    padding-top: 0.4rem;
+    color: #aaa; }
+  #form #email:focus {
+    outline-color: #96d800; }
   #form #submit {
     font-family: "Josefin Sans", sans-serif;
     font-weight: 700;
     font-size: 1.6rem;
     text-transform: uppercase;
     color: #fff;
-    background-color: #96d800;
+    background-color: #5d8200;
     border: 0;
     border-radius: 0 30px 30px 0;
     padding: 0 2.5rem;
     padding-top: 1.5rem;
-    padding-bottom: 1.1rem; }
-
-.header-title {
-  font-family: "Amatic SC", cursive;
-  font-size: 8rem;
-  color: #fff;
-  text-transform: uppercase; }
-  .header-title span {
-    display: block;
-    color: #96d800; }
+    padding-bottom: 1.1rem;
+    cursor: pointer; }
+  #form #submit:hover {
+    background-color: #f58f92; }
