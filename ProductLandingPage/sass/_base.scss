@@ -2,9 +2,11 @@ $font-primary: 'Josefin Sans',
 sans-serif;
 $font-secondary: 'Amatic SC',
 cursive;
-$color-primary: #96d800;
+$color-primary: #5d8200;
+$color-primary-light: #96d800;
 $color-secondary: #f58f92;
-
+$bg-color: #fffffe;
+$font-color: #585858;
 
 *,
 *::before,
@@ -20,10 +22,10 @@ html {
 }
 
 body {
-  background-color: #fffffe;
+  background-color: $bg-color;
   font-family: $font-primary;
   font-size: 1.8rem;
-  color: #585858;
+  color: $font-color;
   line-height: 1.4;
 }
 

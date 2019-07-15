@@ -1,19 +1,24 @@
 #about {
-    padding: 10rem 4rem;
+    padding: 10rem 4rem 0 4rem;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .about-text {
-    flex: 0 1 50%;
+    flex: 1 1;
     padding: 5rem;
-
 }
 
 .collage {
-    flex: 1;
+    flex: 1 1;
+    min-width: 50rem;
     display: flex;
     align-items: center;
     position: relative;
+    height: 30vw;
+
+
 
 
     &__item {
@@ -43,6 +48,7 @@
         &--3 {
             top: 11vw;
             left: 11vw;
+
         }
     }
 
