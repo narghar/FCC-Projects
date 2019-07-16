@@ -8,20 +8,22 @@
     background-size: cover;
     background-position: center;
     color: #fff;
-    padding: 3rem 10rem;
+    padding: 3rem 0 3rem 5vw;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+
 
     & p {
         flex: 1 1;
     }
 }
 
-#video {}
-
 .video-container {
-    flex: 1 1 30%;
+    flex: 0 1 40%;
+
+
 
     & p {
         margin-bottom: 2rem;
@@ -35,6 +37,15 @@
     height: 0;
     overflow: hidden;
     max-width: 100%;
+    color: rgba($color-secondary, .5);
+    box-shadow: 0 0 3rem 2px;
+    border-radius: 6px;
+    transition: color .5s;
+}
+
+.embed-container:hover {
+    box-shadow: 0 0 3rem 2px;
+    color: rgba($color-secondary, .9);
 }
 
 .embed-container iframe,
@@ -48,33 +59,45 @@
 }
 
 .featured-icons {
-    flex: 1 1 50%;
+    flex: 0 1 45%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-
-
+    justify-content: center;
+    text-align: center;
 }
 
 .icon-box {
-    background-color: rgba($color-primary, .9);
-    flex: 0 1 40%;
-    padding: 2rem 0;
+    background-color: rgba($color-primary, .8);
+    width: 30%;
     margin: 2.5rem;
-    border-radius: 8px;
-    text-align: center;
+    border-radius: 6px;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+        float: left;
+    }
+
+    &__content {
+        position: absolute;
+        width: 80%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
 
     & h3 {
         font-size: 2rem;
         font-weight: 100;
-
     }
 
     & .fas {
-        font-size: 3.5rem;
+        font-size: 2.2rem;
         background-color: $color-secondary;
         border-radius: 50%;
-        padding: 3rem;
+        padding: 2rem;
     }
 
 

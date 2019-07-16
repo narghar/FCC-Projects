@@ -16,10 +16,15 @@ body {
   color: #585858;
   line-height: 1.4; }
 
-h2 {
+h2.secondary {
   font-size: 3.6rem;
   text-transform: uppercase;
   color: #f58f92; }
+
+h2.primary {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  color: #96d800; }
 
 #about {
   padding: 10rem 4rem 0 4rem;
@@ -64,15 +69,16 @@ h2 {
   background-size: cover;
   background-position: center;
   color: #fff;
-  padding: 3rem 10rem;
+  padding: 3rem 0 3rem 5vw;
   display: flex;
   flex-wrap: wrap;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
   #featured-video p {
     flex: 1 1; }
 
 .video-container {
-  flex: 1 1 30%; }
+  flex: 0 1 40%; }
   .video-container p {
     margin-bottom: 2rem; }
 
@@ -81,7 +87,15 @@ h2 {
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
-  max-width: 100%; }
+  max-width: 100%;
+  color: rgba(245, 143, 146, 0.5);
+  box-shadow: 0 0 3rem 2px;
+  border-radius: 6px;
+  transition: color .5s; }
+
+.embed-container:hover {
+  box-shadow: 0 0 3rem 2px;
+  color: rgba(245, 143, 146, 0.9); }
 
 .embed-container iframe,
 .embed-container object,
@@ -93,26 +107,37 @@ h2 {
   height: 100%; }
 
 .featured-icons {
-  flex: 1 1 50%;
+  flex: 0 1 45%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly; }
+  justify-content: center;
+  text-align: center; }
 
 .icon-box {
-  background-color: rgba(93, 130, 0, 0.9);
-  flex: 0 1 40%;
-  padding: 2rem 0;
+  background-color: rgba(93, 130, 0, 0.8);
+  width: 30%;
   margin: 2.5rem;
-  border-radius: 8px;
-  text-align: center; }
+  border-radius: 6px;
+  position: relative; }
+  .icon-box::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+    float: left; }
+  .icon-box__content {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
   .icon-box h3 {
     font-size: 2rem;
     font-weight: 100; }
   .icon-box .fas {
-    font-size: 3.5rem;
+    font-size: 2.2rem;
     background-color: #f58f92;
     border-radius: 50%;
-    padding: 3rem; }
+    padding: 2rem; }
 
 #header {
   height: 100vh;

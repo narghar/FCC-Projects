@@ -29,11 +29,16 @@ body {
   line-height: 1.4;
 }
 
-h2 {
+h2.secondary {
   font-size: 3.6rem;
   text-transform: uppercase;
   color: $color-secondary;
 }
 
+h2.primary {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  color: $color-primary-light;
+}
 
 // https://colorpalettes.net/color-palette-3862/
