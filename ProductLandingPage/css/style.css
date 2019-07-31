@@ -26,6 +26,12 @@ h2.primary {
   text-transform: uppercase;
   color: #96d800; }
 
+h4 {
+  font-size: 3.2rem;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Amatic SC", cursive; }
+
 #about {
   padding: 10rem 4rem 0 4rem;
   display: flex;
@@ -275,10 +281,18 @@ h2.primary {
   overflow: hidden;
   background-color: #fff;
   box-shadow: 0 0 12px 0px rgba(0, 0, 0, 0.45);
-  margin-bottom: 4rem; }
+  padding-bottom: 2rem;
+  margin-bottom: 4rem;
+  transition: .3s;
+  text-align: center; }
+  .tour-card:hover {
+    transform: scale(1.05); }
+  .tour-card:hover h4 {
+    color: #96d800; }
   .tour-card__img {
     width: 100%;
-    height: 20rem; }
+    height: 20rem;
+    position: relative; }
     .tour-card__img--1 {
       background: url(../img/01-tour.jpg);
       background-size: cover; }
@@ -288,5 +302,47 @@ h2.primary {
     .tour-card__img--3 {
       background: url(../img/03-tour.jpg);
       background-size: cover; }
+  .tour-card__heading {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.55); }
+  .tour-card__price {
+    position: absolute;
+    right: -2rem;
+    top: 0rem;
+    width: 14rem;
+    padding-top: .6rem;
+    padding-left: 3rem;
+    text-align: center;
+    background-color: #fff;
+    display: inline-block;
+    transform: rotate(30deg);
+    color: #f58f92;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.45); }
   .tour-card__description {
-    list-style: none; }
+    list-style: none;
+    margin: 2rem auto;
+    font-size: 1.7rem;
+    width: 70%; }
+    .tour-card__description li {
+      padding: .5rem 0;
+      padding-top: .9rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
+  .tour-card__details {
+    display: inline-block;
+    background-color: #f58f92;
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    padding-top: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.3rem;
+    border-radius: 3rem;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    transition: .3s; }
+  .tour-card__details:hover {
+    background-color: #5d8200; }

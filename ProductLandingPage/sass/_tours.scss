@@ -14,11 +14,24 @@
   overflow: hidden;
   background-color: #fff;
   box-shadow: 0 0 12px 0px rgba(0, 0, 0, 0.45);
+  padding-bottom: 2rem;
   margin-bottom: 4rem;
+  transition: .3s;
+  text-align: center;
+
+  &:hover {
+    transform: scale(1.05);
+    // box-shadow: 0 0 12px 0px rgba($color-secondary, 0.45);
+  }
+
+  &:hover h4 {
+    color: $color-primary-light;
+  }
 
   &__img {
     width: 100%;
     height: 20rem;
+    position: relative;
 
 
     &--1 {
@@ -37,11 +50,59 @@
     }
   }
 
-  &__heading {}
+  &__heading {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .55);
+  }
+
+  &__price {
+    position: absolute;
+    right: -2rem;
+    top: 0rem;
+    width: 14rem;
+    padding-top: .6rem;
+    padding-left: 3rem;
+    text-align: center;
+    background-color: #fff;
+    display: inline-block;
+    transform: rotate(30deg);
+    color: $color-secondary;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.45);
+  }
 
   &__description {
     list-style: none;
+    margin: 2rem auto;
+    font-size: 1.7rem;
+    width: 70%;
+
+    & li {
+      padding: .5rem 0;
+      padding-top: .9rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    }
   }
 
-  &__details {}
+  &__details {
+    display: inline-block;
+    background-color: $color-secondary;
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    padding-top: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.3rem;
+    border-radius: 3rem;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, .2);
+    transition: .3s;
+  }
+
+  &__details:hover {
+    background-color: $color-primary;
+  }
 }
