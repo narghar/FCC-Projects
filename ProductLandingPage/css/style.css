@@ -26,6 +26,11 @@ h2.primary {
   text-transform: uppercase;
   color: #96d800; }
 
+h3 {
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 110%; }
+
 h4 {
   font-size: 3.2rem;
   color: #fff;
@@ -136,14 +141,12 @@ h4 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
-  .icon-box h3 {
-    font-size: 2rem;
-    font-weight: 100; }
   .icon-box .fas {
     font-size: 2.2rem;
     background-color: #f58f92;
     border-radius: 50%;
-    padding: 2rem; }
+    padding: 2rem;
+    margin-bottom: 2rem; }
 
 #header {
   height: 100vh;
