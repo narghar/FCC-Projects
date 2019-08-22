@@ -1,0 +1,28 @@
+#contact {
+  padding: 4rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  & h4 {
+    color: $font-color;
+    text-align: center;
+  }
+}
+
+.contact-message {
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+.contact-links {
+
+  &__nav ul {
+    text-align: center;
+    list-style: none;
+  }
+}
