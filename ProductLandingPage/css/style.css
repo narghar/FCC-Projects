@@ -157,7 +157,8 @@ h4 {
   background-attachment: fixed;
   position: relative;
   opacity: .5;
-  animation: opacity 2s forwards; }
+  animation: opacity 2s forwards;
+  z-index: 100; }
 
 @keyframes opacity {
   100% {
