@@ -14,7 +14,6 @@
     align-items: center;
     justify-content: center;
 
-
     & p {
         flex: 1 1;
     }
@@ -23,11 +22,8 @@
 .video-container {
     flex: 0 1 40%;
 
-
-
     & p {
         margin-bottom: 2rem;
-
     }
 }
 
@@ -72,23 +68,35 @@
     margin: 2.5rem;
     border-radius: 6px;
     position: relative;
-    &:nth-child(1)  .fas {
-       animation: blinkIcon 8s infinite;
+
+    &:nth-child(1) .fas {
+        animation: blinkIcon 8s infinite;
     }
-    &:nth-child(2)  .fas {
+
+    &:nth-child(2) .fas {
         animation: blinkIcon 8s 1s infinite;
-     }
-     &:nth-child(3)  .fas {
+    }
+
+    &:nth-child(3) .fas {
         animation: blinkIcon 8s 2s infinite;
-     }
-     &:nth-child(4)  .fas {
+    }
+
+    &:nth-child(4) .fas {
         animation: blinkIcon 8s 3s infinite;
-     }
+    }
 
     @keyframes blinkIcon {
-        80% {transform: scale(1)}
-        90% {transform: scale(1.3)}
-        100% {transform: scale(1)}
+        80% {
+            transform: scale(1)
+        }
+
+        90% {
+            transform: scale(1.3)
+        }
+
+        100% {
+            transform: scale(1)
+        }
     }
 
     &::before {
@@ -104,22 +112,11 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
-
     }
 
     & .fas {
         font-size: 4.2rem;
         color: $color-secondary;
-        // background-color: $color-secondary;
-        // border-radius: 50%;
-        // padding: 2rem;
         margin-bottom: 2rem;
-
-
     }
-
-
-
-
 }
