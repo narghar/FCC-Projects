@@ -155,7 +155,13 @@ h4 {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  position: relative; }
+  position: relative;
+  opacity: .5;
+  animation: opacity 2s forwards; }
+
+@keyframes opacity {
+  100% {
+    opacity: 1; } }
 
 #header-img {
   width: 3.6rem;
@@ -170,6 +176,8 @@ h4 {
   display: flex;
   justify-content: center; }
   #nav-bar .nav-brand {
+    position: relative;
+    left: -100%;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -177,7 +185,14 @@ h4 {
     font-size: 2.3rem;
     font-weight: 700;
     color: #fff;
-    transition: all 0.5s; }
+    transition: all 0.5s;
+    animation: appear 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards; }
+
+@keyframes appear {
+  0% {
+    left: -100%; }
+  100% {
+    left: 0; } }
   #nav-bar .nav-brand:hover {
     transform: translateY(0.5rem); }
   #nav-bar ul {
@@ -227,10 +242,16 @@ h4 {
   font-family: "Amatic SC", cursive;
   font-size: 7vw;
   color: #fff;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  transform: scale(0);
+  animation: title-appear 2s forwards; }
   .header-title span {
     display: block;
     color: #96d800; }
+
+@keyframes title-appear {
+  100% {
+    transform: scale(1); } }
 
 #form {
   margin-top: 3rem;

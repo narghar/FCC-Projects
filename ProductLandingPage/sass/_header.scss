@@ -10,12 +10,19 @@
   background-position: center;
   background-attachment: fixed;
   position: relative;
+  opacity: .5;
+  animation: opacity 2s forwards;
+}
+@keyframes opacity {
+  100% {opacity: 1}
 }
 
 #header-img {
   width: 3.6rem;
   height: 3.2rem;
+
 }
+
 
 #nav-bar {
   position: fixed;
@@ -27,6 +34,8 @@
   justify-content: center;
 
   & .nav-brand {
+    position: relative;
+    left: -100%;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -35,8 +44,16 @@
     font-weight: 700;
     color: #fff;
     transition: all 0.5s;
+    animation: appear 2s cubic-bezier(0.075, 0.82, 0.165, 1)  forwards;
   }
-
+  @keyframes appear {
+    0% {
+      left: -100%;
+    }
+    100% {
+        left: 0;
+    }
+  }
   & .nav-brand:hover {
     transform: translateY(0.5rem);
   }
@@ -103,13 +120,17 @@
   font-size: 7vw;
   color: #fff;
   text-transform: uppercase;
-
+  transform: scale(0);
+  animation: title-appear 2s forwards;
   & span {
     display: block;
     color: $color-primary-light;
   }
-}
 
+}
+@keyframes title-appear {
+  100% {transform: scale(1)}
+}
 #form {
   margin-top: 3rem;
   display: flex;
