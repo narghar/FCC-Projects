@@ -44,14 +44,11 @@
     font-weight: 700;
     color: #fff;
     transition: all 0.5s;
-    animation: appear 2s cubic-bezier(0.075, 0.82, 0.165, 1)  forwards;
+    animation: appear 2s ease-out  forwards;
   }
   @keyframes appear {
-    0% {
-      left: -100%;
-    }
     100% {
-        left: 0;
+        left: 2rem;
     }
   }
   & .nav-brand:hover {
