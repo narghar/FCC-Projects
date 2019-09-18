@@ -1,0 +1,102 @@
+#contact {
+  padding: 4rem 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  & h4 {
+    color: $font-color;
+    text-align: center;
+    margin-bottom: 1.6rem;
+  }
+}
+.contact-info {
+  text-align: center;
+
+  &__image {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 1.4rem;
+  }
+
+  &__adress {
+    font-size: 1.5rem;
+    font-style: normal;
+  }
+}
+
+.contact-links {
+
+  & ul {
+    text-align: center;
+    list-style: none;
+  }
+  & ul a {
+    text-decoration: none;
+    line-height: 4rem;
+    color: $color-secondary-dark;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+}
+
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+
+
+  &__email {
+    border: 1px solid $color-primary;
+    border-radius: 8px;
+    font-family: $font-primary;
+    font-size: 1.5rem;
+    padding: 1.5rem 2.5rem 1.1rem 2.5rem;
+    margin-bottom: 1.3rem;
+    color: $font-color;
+  }
+
+  &__message {
+    border: 1px solid $color-primary;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    padding: 1.5rem 2.5rem 3.1rem 2.5rem;
+    font-family: $font-primary;
+    color: $font-color;
+    margin-bottom: 1.3rem;
+  }
+
+  &__submit {
+      align-self: center;
+      width: 80%;
+      font-family: $font-primary;
+      font-weight: 700;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: $color-primary;
+      border: 0;
+      border-radius: 30px;
+      padding: 0 2.5rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1.1rem;
+      cursor: pointer;
+
+    &:hover {
+      background-color: $color-secondary;
+    }
+  }
+}
+
+.copyright {
+  margin-top: 3rem;
+  padding: .8rem;
+  text-align: center;
+  flex-basis: 100%;
+  background-color: $navBar-color;
+  color: $bg-color;
+  font-size: 1.4rem;
+}

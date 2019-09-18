@@ -16,15 +16,15 @@ body {
   color: #585858;
   line-height: 1.4; }
 
-h2.secondary {
-  font-size: 3.6rem;
-  text-transform: uppercase;
-  color: #f58f92; }
-
 h2.primary {
   font-size: 3.6rem;
   text-transform: uppercase;
   color: #96d800; }
+
+h2.secondary {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  color: #f58f92; }
 
 h3 {
   font-size: 2rem;
@@ -283,6 +283,7 @@ h4 {
     font-family: "Josefin Sans", sans-serif;
     font-size: 1.5rem;
     padding-left: 2.5rem;
+    padding-right: 2.5rem;
     padding-top: 0.4rem;
     color: #aaa; }
   #form #email:focus {
@@ -386,7 +387,7 @@ h4 {
 
 #gallery {
   background-image: linear-gradient(to bottom, #0f2461, #0f2461, #0f2461, #0f2461, #0f2461, #1f1f56, #271b4c, #2a1742, #29102e, #220c1d, #18060f, #000000);
-  padding: 4rem 10rem;
+  padding: 6rem 10rem;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(9, 5vw);
@@ -443,18 +444,78 @@ h4 {
     border-color: #f58f92; } }
 
 #contact {
-  padding: 4rem 0;
+  padding: 4rem 0 0 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; }
   #contact h4 {
     color: #585858;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 1.6rem; }
 
-.contact-message__form {
-  display: flex;
-  flex-direction: column; }
+.contact-info {
+  text-align: center; }
+  .contact-info__image {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 1.4rem; }
+  .contact-info__adress {
+    font-size: 1.5rem;
+    font-style: normal; }
 
-.contact-links__nav ul {
+.contact-links ul {
   text-align: center;
   list-style: none; }
+
+.contact-links ul a {
+  text-decoration: none;
+  line-height: 4rem;
+  color: #c14747; }
+  .contact-links ul a:hover {
+    color: #5d8200; }
+
+.contact-form {
+  display: flex;
+  flex-direction: column; }
+  .contact-form__email {
+    border: 1px solid #5d8200;
+    border-radius: 8px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.5rem;
+    padding: 1.5rem 2.5rem 1.1rem 2.5rem;
+    margin-bottom: 1.3rem;
+    color: #585858; }
+  .contact-form__message {
+    border: 1px solid #5d8200;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    padding: 1.5rem 2.5rem 3.1rem 2.5rem;
+    font-family: "Josefin Sans", sans-serif;
+    color: #585858;
+    margin-bottom: 1.3rem; }
+  .contact-form__submit {
+    align-self: center;
+    width: 80%;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #5d8200;
+    border: 0;
+    border-radius: 30px;
+    padding: 0 2.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.1rem;
+    cursor: pointer; }
+    .contact-form__submit:hover {
+      background-color: #f58f92; }
+
+.copyright {
+  margin-top: 3rem;
+  padding: .8rem;
+  text-align: center;
+  flex-basis: 100%;
+  background-color: #0f2461;
+  color: #f5f5f5;
+  font-size: 1.4rem; }
