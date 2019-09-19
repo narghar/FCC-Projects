@@ -1,7 +1,11 @@
+
+// FONT VARIABLES
 $font-primary: 'Josefin Sans',
 sans-serif;
 $font-secondary: 'Amatic SC',
 cursive;
+
+// COLOR VARIABLES
 $color-primary: #5d8200;
 $color-primary-light: #96d800;
 $color-secondary: #f58f92;
@@ -10,6 +14,14 @@ $navBar-color: #0f2461;
 $bg-color: #f5f5f5;
 $font-color: #585858;
 
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 65.5em;   // 1048px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+
+// CSS RESET
 *,
 *::before,
 *::after {
@@ -23,6 +35,7 @@ html {
   font-size: 62.5%;
 }
 
+// TYPOGRAPHY
 body {
   background-color: $bg-color;
   font-family: $font-primary;

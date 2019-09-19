@@ -8,7 +8,7 @@
     background-size: cover;
     background-position: center;
     color: #fff;
-    padding: 3rem 0 3rem 5vw;
+    padding: 3rem 0 3rem 3rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -20,7 +20,7 @@
 }
 
 .video-container {
-    flex: 0 1 40%;
+    flex: 0 1 50rem;
 
     & p {
         margin-bottom: 2rem;
@@ -60,6 +60,10 @@
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+
+    @media only screen and (max-width: $bp-large) {
+        flex: 100%;
+    }
 }
 
 .icon-box {
@@ -68,6 +72,10 @@
     margin: 2.5rem;
     border-radius: 6px;
     position: relative;
+
+    @media screen and (orientation: landscape) and (max-width: $bp-large) {
+        width: 18%;
+    }
 
     &:nth-child(1) .fas {
         animation: blinkIcon 8s infinite;

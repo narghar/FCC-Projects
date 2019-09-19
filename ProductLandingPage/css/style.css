@@ -44,16 +44,16 @@ h4 {
   align-items: center; }
 
 .about-text {
-  flex: 1 1;
+  flex: 1 1 50%;
   padding: 5rem; }
 
 .collage {
-  flex: 1 1;
-  min-width: 50rem;
+  margin: 0 auto;
+  flex: 0 1 50rem;
   display: flex;
   align-items: center;
   position: relative;
-  height: 30vw; }
+  height: 32rem; }
   .collage__item {
     width: 50%;
     position: absolute;
@@ -80,7 +80,7 @@ h4 {
   background-size: cover;
   background-position: center;
   color: #fff;
-  padding: 3rem 0 3rem 5vw;
+  padding: 3rem 0 3rem 3rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -89,7 +89,7 @@ h4 {
     flex: 1 1; }
 
 .video-container {
-  flex: 0 1 40%; }
+  flex: 0 1 50rem; }
   .video-container p {
     margin-bottom: 2rem; }
 
@@ -123,6 +123,9 @@ h4 {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center; }
+  @media only screen and (max-width: 65.5em) {
+    .featured-icons {
+      flex: 100%; } }
 
 .icon-box {
   background-color: rgba(93, 130, 0, 0.8);
@@ -130,6 +133,9 @@ h4 {
   margin: 2.5rem;
   border-radius: 6px;
   position: relative; }
+  @media screen and (orientation: landscape) and (max-width: 65.5em) {
+    .icon-box {
+      width: 18%; } }
   .icon-box:nth-child(1) .fas {
     animation: blinkIcon 8s infinite; }
   .icon-box:nth-child(2) .fas {
