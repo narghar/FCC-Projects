@@ -187,6 +187,12 @@
     display: block;
     color: $color-primary-light;
   }
+  @media (orientation: landscape) and (max-width: $bp-medium) {
+    font-size: 9vw;
+  }
+  @media (orientation: portrait) {
+    font-size: 12vw;
+  }
 
 }
 @keyframes title-appear {
