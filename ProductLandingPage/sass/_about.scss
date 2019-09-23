@@ -1,13 +1,20 @@
 #about {
-    padding: 10rem 4rem 0 4rem;
+    padding: 4rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    @media (max-width: $bp-medium) {
+        padding: 0;
+      }
+
 }
 
 .about-text {
     flex: 1 1 50%;
     padding: 5rem;
+    @media (max-width: $bp-small) {
+        padding: 4rem 2rem;
+    }
 }
 
 .collage {
@@ -17,6 +24,21 @@
     align-items: center;
     position: relative;
     height: 32rem;
+    @media (max-width: $bp-medium) {
+        height: 30rem;
+        transform: translate(1.5rem, 0);
+    }
+    @media (max-width: $bp-small) {
+        height: 24rem;
+        flex: 0 1 38rem;
+    }
+    @media (max-width: $bp-smallest) {
+        height: 17rem;
+        flex: 0 1 30rem;
+        transform: translate(.5rem, 0);
+    }
+
+
 
     &__item {
         width: 50%;
@@ -25,10 +47,16 @@
         transition: all .5s;
         border-radius: 4px;
 
+
+
         &:hover {
             box-shadow: 0 0 0 1rem $color-secondary;
             transform: scale(1.2);
             z-index: 100;
+            @media (max-width: $bp-small) {
+                box-shadow: 0 0 0 .5rem $color-secondary;
+            transform: scale(1.15);
+            }
         }
 
         &--1 {

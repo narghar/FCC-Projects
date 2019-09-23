@@ -46,15 +46,19 @@ body {
   line-height: 1.4;
 }
 
-h2.primary {
+h2.primary, h2.secondary {
   font-size: 3.6rem;
   text-transform: uppercase;
+  @media (max-width: $bp-small) {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+}
+h2.primary {
   color: $color-primary-light;
 }
-
 h2.secondary {
-  font-size: 3.6rem;
-  text-transform: uppercase;
   color: $color-secondary;
 }
 
