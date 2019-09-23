@@ -5,6 +5,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  @media (max-width: $bp-medium) {
+    padding: 5rem 0 2rem 0;
+  }
+  @media (max-width: $bp-smallest) {
+    padding: 4rem 0 1rem 0;
+  }
 }
 
 .tour-card {

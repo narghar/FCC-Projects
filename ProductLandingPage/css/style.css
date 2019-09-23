@@ -451,6 +451,12 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly; }
+  @media (max-width: 48em) {
+    #tours {
+      padding: 5rem 0 2rem 0; } }
+  @media (max-width: 25.5em) {
+    #tours {
+      padding: 4rem 0 1rem 0; } }
 
 .tour-card {
   width: 35rem;
