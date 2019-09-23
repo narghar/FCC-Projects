@@ -8,4 +8,4 @@ Personal projects freeCodeCamp.org
 **[DEMO](https://narghar.github.io/FCC-Projects/SurveyForm/)**
 
  ## 3. Product Landing Page
-**[DEMO](https://narghar.github.io/FCC-Projects/ProductLandingPage/)** - project still under active development
+**[DEMO](https://narghar.github.io/FCC-Projects/ProductLandingPage/)**
