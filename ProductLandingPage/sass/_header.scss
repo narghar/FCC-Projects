@@ -24,13 +24,13 @@
 
 }
 
-
 #nav-bar {
   position: fixed;
   height: 4rem;
   background-color: $navBar-color;
   width: 100%;
   z-index: 1000;
+
   display: flex;
   justify-content: center;
   transition:  .3s;
@@ -43,6 +43,7 @@
     position: relative;
     left: -100%;
     display: flex;
+    order: -1;
     align-items: center;
     text-decoration: none;
     margin-left: 2rem;
@@ -51,6 +52,10 @@
     color: #fff;
     transition: all 0.5s;
     animation: appear 2s ease-out  forwards;
+
+    @media (max-width: $bp-medium) {
+      margin-left: 2.8rem;
+    }
   }
   @keyframes appear {
     100% {
@@ -70,8 +75,7 @@
 
     @media (max-width: $bp-medium) {
       display: none;
-      margin-left: 0;
-      margin-right: 8rem;
+      margin-left: -8rem;
     }
   }
 
@@ -122,6 +126,7 @@
     @media (max-width: $bp-medium) {
       display: flex;
     }
+
   }
 
   & .toggle {
@@ -152,18 +157,24 @@
     transform-origin: top;
     transform: rotate(135deg);
   }
+  & #hamburger:checked + label {
+    border-color: $color-secondary;
+  }
+  & #hamburger:checked ~ .nav-brand {
+    flex-direction: column;
+    margin-left: 5rem;
+    transform: rotate(-90deg);
+  }
   // Display menu on mobile
   & #hamburger:checked ~ ul {
     display: flex;
     flex-direction: column;
     @media (min-width: $bp-medium) {
       flex-direction: row;
+
     }
   }
 }
-
-
-
 
 .center-wrap {
   width: 100%;
@@ -208,6 +219,10 @@
     color: #fff;
     font-size: 2rem;
     margin-bottom: 1rem;
+
+    @media (max-width: $bp-smallest) {
+      font-size: 1.9rem;
+    }
   }
 
   & #email {
@@ -220,6 +235,13 @@
     padding-right: 2.5rem;
     padding-top: 0.4rem;
     color: #aaa;
+    @media (max-width: $bp-smallest) {
+      border-radius: 30px;
+      margin-bottom: 1.5rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1.1rem;
+      text-align: center;
+    }
   }
 
   & #email:focus {
@@ -240,6 +262,9 @@
     padding-top: 1.5rem;
     padding-bottom: 1.1rem;
     cursor: pointer;
+    @media (max-width: $bp-smallest) {
+      border-radius: 30px;
+    }
   }
 
   & #submit:hover {

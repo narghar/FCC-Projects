@@ -205,6 +205,7 @@ h4 {
     position: relative;
     left: -100%;
     display: flex;
+    order: -1;
     align-items: center;
     text-decoration: none;
     margin-left: 2rem;
@@ -213,6 +214,9 @@ h4 {
     color: #fff;
     transition: all 0.5s;
     animation: appear 2s ease-out  forwards; }
+    @media (max-width: 48em) {
+      #nav-bar .nav-brand {
+        margin-left: 2.8rem; } }
 
 @keyframes appear {
   100% {
@@ -228,8 +232,7 @@ h4 {
     @media (max-width: 48em) {
       #nav-bar ul {
         display: none;
-        margin-left: 0;
-        margin-right: 8rem; } }
+        margin-left: -8rem; } }
   #nav-bar ul li {
     margin-right: 2rem; }
   #nav-bar .nav-link:active,
@@ -288,6 +291,12 @@ h4 {
     margin: 0;
     transform-origin: top;
     transform: rotate(135deg); }
+  #nav-bar #hamburger:checked + label {
+    border-color: #f58f92; }
+  #nav-bar #hamburger:checked ~ .nav-brand {
+    flex-direction: column;
+    margin-left: 5rem;
+    transform: rotate(-90deg); }
   #nav-bar #hamburger:checked ~ ul {
     display: flex;
     flex-direction: column; }
@@ -335,6 +344,9 @@ h4 {
     color: #fff;
     font-size: 2rem;
     margin-bottom: 1rem; }
+    @media (max-width: 25.5em) {
+      #form label {
+        font-size: 1.9rem; } }
   #form #email {
     flex: 0 2 50%;
     border-width: 0;
@@ -345,6 +357,13 @@ h4 {
     padding-right: 2.5rem;
     padding-top: 0.4rem;
     color: #aaa; }
+    @media (max-width: 25.5em) {
+      #form #email {
+        border-radius: 30px;
+        margin-bottom: 1.5rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.1rem;
+        text-align: center; } }
   #form #email:focus {
     outline-color: #96d800; }
   #form #submit {
@@ -360,6 +379,9 @@ h4 {
     padding-top: 1.5rem;
     padding-bottom: 1.1rem;
     cursor: pointer; }
+    @media (max-width: 25.5em) {
+      #form #submit {
+        border-radius: 30px; } }
   #form #submit:hover {
     background-color: #f58f92; }
 

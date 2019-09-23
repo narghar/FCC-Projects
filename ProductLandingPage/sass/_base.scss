@@ -1,9 +1,9 @@
-
 // FONT VARIABLES
 $font-primary: 'Josefin Sans',
 sans-serif;
 $font-secondary: 'Amatic SC',
 cursive;
+
 
 // COLOR VARIABLES
 $color-primary: #5d8200;
@@ -20,6 +20,8 @@ $bp-largest: 73.25em;   // 1172px
 $bp-large: 65.5em;   // 1048px
 $bp-medium: 48em;    // 768px;
 $bp-small: 37.5em;    // 600px;
+$bp-smallest: 25.5em; // 400px;
+
 
 // CSS RESET
 *,
@@ -68,4 +70,3 @@ h4 {
   font-weight: 700;
   font-family: $font-secondary;
 }
-
