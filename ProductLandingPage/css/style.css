@@ -19,10 +19,12 @@ body {
 h2.primary, h2.secondary {
   font-size: 3.6rem;
   text-transform: uppercase; }
+  @media (max-width: 65.5em) {
+    h2.primary, h2.secondary {
+      text-align: center; } }
   @media (max-width: 37.5em) {
     h2.primary, h2.secondary {
-      font-size: 3rem;
-      text-align: center; } }
+      font-size: 3rem; } }
 
 h2.primary {
   color: #96d800; }
@@ -34,6 +36,9 @@ h3 {
   font-size: 2rem;
   font-weight: 100;
   line-height: 110%; }
+  @media (max-width: 48em) {
+    h3 {
+      font-size: 1.5rem; } }
 
 h4 {
   font-size: 3.2rem;
@@ -112,11 +117,17 @@ h4 {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center; }
+  @media (max-width: 65.5em) {
+    #featured-video {
+      padding: 3rem 0; } }
   #featured-video p {
     flex: 1 1; }
 
 .video-container {
   flex: 0 1 50rem; }
+  @media (max-width: 65.5em) {
+    .video-container {
+      flex: 0 1 70vw; } }
   .video-container p {
     margin-bottom: 2rem; }
 
@@ -153,6 +164,13 @@ h4 {
   @media only screen and (max-width: 65.5em) {
     .featured-icons {
       flex: 100%; } }
+  @media (max-width: 48em) {
+    .featured-icons {
+      flex: 0 1 75%; } }
+  @media (max-width: 25.5em) {
+    .featured-icons {
+      flex: 0 0 100%;
+      margin-top: 1.5rem; } }
 
 .icon-box {
   background-color: rgba(93, 130, 0, 0.8);
@@ -160,9 +178,16 @@ h4 {
   margin: 2.5rem;
   border-radius: 6px;
   position: relative; }
-  @media screen and (orientation: landscape) and (max-width: 65.5em) {
+  @media (max-width: 65.5em) {
     .icon-box {
       width: 18%; } }
+  @media (max-width: 48em) {
+    .icon-box {
+      width: 25%; } }
+  @media (max-width: 37.5em) {
+    .icon-box {
+      width: 29%;
+      margin: 1rem; } }
   .icon-box:nth-child(1) .fas {
     animation: blinkIcon 8s infinite; }
   .icon-box:nth-child(2) .fas {
@@ -190,10 +215,17 @@ h4 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+    @media (max-width: 37.5em) {
+      .icon-box__content {
+        width: auto; } }
   .icon-box .fas {
     font-size: 4.2rem;
     color: #f58f92;
     margin-bottom: 2rem; }
+    @media (max-width: 37.5em) {
+      .icon-box .fas {
+        font-size: 3.2rem;
+        margin-bottom: .7rem; } }
 
 #header {
   height: 100vh;
