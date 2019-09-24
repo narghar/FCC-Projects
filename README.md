@@ -9,3 +9,6 @@ Personal projects freeCodeCamp.org
 
  ## 3. Product Landing Page
 **[DEMO](https://narghar.github.io/FCC-Projects/ProductLandingPage/)**
+
+ ## 4. Technical Documentation Page
+**[DEMO](https://narghar.github.io/FCC-Projects/TechDocPage/)** - in progress
