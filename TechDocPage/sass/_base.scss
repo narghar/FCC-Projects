@@ -1,0 +1,6 @@
+$test: linear-gradient(to right top, #c72683, #94387e, #673c6c, #433750, #2d2d2d);
+
+body {
+  height: 100vh;
+  background-image: $test;
+}
